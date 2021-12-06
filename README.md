@@ -1,12 +1,12 @@
 # ToDoApp
-<h>Register</h1>
+<h1>Register</h1>
 <div align="center">
-    <img src="https://github.com/amineghribii/ToDoApp/blob/main/src/app/snapchots/login.png" width="400px"</img> 
+    <img src="https://github.com/amineghribii/ToDoApp/blob/main/src/app/snapchots/register.png"</img> 
 </div>
 
 <h1>Login</h1>
 <div align="center">
-    <img src="https://github.com/amineghribii/ToDoApp/blob/main/src/app/snapchots/register.png" width="400px"</img> 
+    <img src="https://github.com/amineghribii/ToDoApp/blob/main/src/app/snapchots/login.png" width="400px"</img> 
 </div>
 
 <div align="center">
