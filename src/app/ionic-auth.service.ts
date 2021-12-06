@@ -45,6 +45,7 @@ export class IonicAuthService {
     })
   }
 
+  // user details from firebase
   userDetails() {
     return this.angularFireAuth.user
   }
