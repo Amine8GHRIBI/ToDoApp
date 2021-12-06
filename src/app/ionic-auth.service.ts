@@ -10,6 +10,7 @@ export class IonicAuthService {
     private angularFireAuth: AngularFireAuth
   ) { }  
 
+  // create uservwith fire auth 
   createUser(value) {
     return new Promise<any>((resolve, reject) => {
       this.angularFireAuth.createUserWithEmailAndPassword(value.email, value.password)
@@ -19,6 +20,7 @@ export class IonicAuthService {
     })
   }
 
+  // methode to signin
   signinUser(value) {
     return new Promise<any>((resolve, reject) => {
       this.angularFireAuth.signInWithEmailAndPassword(value.email, value.password)
@@ -28,6 +30,7 @@ export class IonicAuthService {
     })
   }
 
+          //log out
   signoutUser() {
     return new Promise<void>((resolve, reject) => {
       if (this.angularFireAuth.currentUser) {

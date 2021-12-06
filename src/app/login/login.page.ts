@@ -17,7 +17,7 @@ export class LoginPage implements OnInit {
   successMsg: string = '';
   errorMsg: string = '';
   
-
+//error msg object /modele
   error_msg = {
     'email': [
       { 
@@ -48,6 +48,7 @@ export class LoginPage implements OnInit {
   ) { }
 
   ngOnInit() {
+    // reactive forms form group class
     this.userForm = this.fb.group({
       email: new FormControl('', Validators.compose([
         Validators.required,
@@ -60,6 +61,7 @@ export class LoginPage implements OnInit {
     });
   }
 
+  //aprés l'injection de authservice on fait l'appel a la methode signin
   signIn(value) {
     this.ionicAuthService.signinUser(value)
       .then((response) => {

@@ -41,6 +41,7 @@ export class RegisterPage implements OnInit {
 
   constructor(
     private router: Router,
+    //injection IonicAuthService
     private ionicAuthService: IonicAuthService,
     private fb: FormBuilder
   ) { }
@@ -57,7 +58,7 @@ export class RegisterPage implements OnInit {
       ])),
     });
   }
-
+ //appel IonicAuthService et on utilise signup with value object user
   signUp(value) {
     this.ionicAuthService.createUser(value)
       .then((response) => {

@@ -15,9 +15,12 @@ export class HomePage implements OnInit {
     const date = new Date();
     const options = { weekday: 'long', month: 'long', day: 'numeric' } as const;
     this.currentDate = date.toLocaleDateString('fr-FR', options);
+   // a chaque initialisation de constructor il fait un appel vers le methode gettasks() pour lister les taches
     this.getTasks();
    }
 
+
+   // Ajouter une tache to Tasks fBD 
    addTaskToFirebase() {
      console.log('my Task ' +this.myTask)
     this.afDB.list('Tasks/').push({
@@ -32,6 +35,7 @@ export class HomePage implements OnInit {
     this.myTask = '';
   }
 
+  // Méthode to get all taches from fBD
   getTasks() {
     this.afDB.list('Tasks/').snapshotChanges(['child_added', 'child_removed']).subscribe(actions => {
       this.tasks = [];
@@ -51,6 +55,7 @@ export class HomePage implements OnInit {
     console.log('checked: ' + ev.checked);
   }
 
+//remove tache from Tasks fbd
   deleteTask(task: any) {
     this.afDB.list('Tasks/').remove(task.key);
   }
